@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #121212;
+  color: white;
+}
+
+#loginPage, #app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  display: none;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar .header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .header input, .sidebar .header button {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #2b2b2b;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.sidebar h3 {
+  margin: 10px 20px 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #2a2a2a;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: #3b3b3b;
+}
+
+.chatWindow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #181818;
+}
+
+.chatHeader {
+  padding: 20px;
+  background: #252525;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chatInput {
+  display: flex;
+  padding: 10px;
+  background: #252525;
+}
+
+.chatInput input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: white;
+}
+
+.chatInput button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.chatInput button:hover {
+  background: #357abd;
+}
+
+.message {
+  margin-bottom: 10px;
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background: #4a90e2;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+  }
+
+  .sidebar .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .sidebar .header input {
+    flex: 2;
+    margin-right: 10px;
+  }
+
+  .sidebar .header button {
+    flex: 1;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sidebar ul li {
+    flex: none;
+    padding: 8px 15px;
+  }
+
+  .chatWindow {
+    width: 100%;
+  }
+}

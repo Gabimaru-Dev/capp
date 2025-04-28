@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat App - Ayodele David</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="loginPage">
+  <div class="loginBox">
+    <h1>Welcome to Chat App</h1>
+    <input type="text" id="usernameInput" placeholder="Enter your name..." />
+    <button id="loginBtn">Enter Chat</button>
+  </div>
+</div>
+
+<div id="chatApp" class="app hidden">
+  <aside class="sidebar">
+    <div class="header">
+      <h2>Chat App</h2>
+      <button id="createGroupBtn">+ Create Group</button>
+      <button id="toggleThemeBtn">Switch Theme</button>
+    </div>
+    <div class="chats">
+      <h3>Chats</h3>
+      <ul id="chatList"></ul>
+    </div>
+    <div class="groups">
+      <h3>Groups</h3>
+      <ul id="groupList"></ul>
+    </div>
+  </aside>
+
+  <main class="chatWindow">
+    <div class="chatHeader">
+      <h2 id="chatTitle">Select a Chat</h2>
+    </div>
+    <div class="messages" id="messages"></div>
+    <div class="chatInput">
+      <input type="text" id="messageInput" placeholder="Type your message...">
+      <button id="sendBtn">Send</button>
+    </div>
+  </main>
+</div>
+
+<!-- Create Group Modal -->
+<div class="modal" id="createGroupModal">
+  <div class="modalContent">
+    <h3>Create Group</h3>
+    <input type="text" id="groupNameInput" placeholder="Group Name">
+    <button id="createBtn">Create</button>
+    <button id="closeModal">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
